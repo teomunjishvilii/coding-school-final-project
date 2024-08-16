@@ -1,4 +1,43 @@
-h1 {
-  color: red;
-  font-size: 42px;
+body {
+  background-color: $main-background;
+
+  .container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1370px) {
+      width: 92%;
+    }
+
+    h5 {
+      margin-bottom: 20px;
+      @include text_font_style($button-background, 14px, 400);
+      text-transform: uppercase;
+
+      @media (max-width: $laptop-small-screen) {
+        font-size: 12px;
+      }
+    }
+
+    h3 {
+      @include text_font_style($nav-elements-color, 32px, 400);
+      position: relative;
+
+      &::after {
+        display: inline-block;
+        content: "";
+        width: 35px;
+        height: 2px;
+        background-color: $button-background;
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+      }
+
+      @media (max-width: $laptop-small-screen) {
+        font-size: 28px;
+      }
+    }
+  }
 }

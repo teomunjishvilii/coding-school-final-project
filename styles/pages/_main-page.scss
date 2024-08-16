@@ -1,0 +1,116 @@
+main {
+  .section_1 {
+    margin-top: 20px;
+    @include flex(justify-content, center);
+
+    .left_block {
+      width: 50%;
+
+      h2 {
+        @include text_font_style($nav-elements-color, 54px, 700);
+        text-transform: uppercase;
+        line-height: 65px;
+
+        @media (max-width: $desktop-large-screen) {
+          font-size: 48px;
+        }
+
+        @media (max-width: 960px) {
+          font-size: 42px;
+        }
+      }
+
+      p {
+        margin-top: 25px;
+        @include text_font_style($logo-color, 14px, 300);
+        line-height: 25px;
+        width: 95%;
+      }
+
+      .training_video {
+        margin-top: 25px;
+
+        i {
+          margin-right: 5px;
+          color: $button-background;
+          cursor: pointer;
+        }
+
+        a {
+          color: $logo-color;
+          font-weight: 800;
+          @include text_font_style($logo-color, 16px, 800);
+
+          &:nth-child(2) {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .right_block {
+      width: 50%;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .about_us_section {
+    margin-top: 150px;
+    @include flex(space-between, center);
+
+    .left_block {
+      transform: rotate(-90deg);
+      width: 5%;
+
+      a {
+        @include text_font_style($button-background, 15px, 400);
+        position: relative;
+        transition: $change-color;
+
+        &::before {
+          display: inline-block;
+          content: "";
+          width: 20%;
+          height: 1px;
+          background-color: $logo-color;
+          position: absolute;
+          top: 50%;
+          left: -20px;
+        }
+
+        &:hover {
+          color: $nav-elements-color;
+        }
+      }
+    }
+
+    .middle_block {
+      margin-left: -70px;
+      width: 38%;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .right_block {
+      width: 50%;
+
+      p {
+        margin-top: 40px;
+        @include text_font_style($logo-color, 14px, 300);
+        line-height: 25px;
+        width: 90%;
+      }
+    }
+  }
+
+  .our_trainers_section {
+    margin-top: 150px;
+  }
+}

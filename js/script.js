@@ -25,3 +25,40 @@ burgerIcon.addEventListener("click", function () {
     }, 500); // Delay to allow smooth transition out
   }
 });
+
+// open the video window on button click
+const videoPlayBtn = document.querySelector(".play_button");
+const videoContainer = document.querySelector(".training_video_overlay");
+const video = document.querySelector("#training_video_container");
+const videoCloseBtn = document.querySelector(".close");
+const videoFrame = document.querySelector("#videoFrame");
+
+// function for opening the video modal
+function OpenVideoModal() {
+  videoContainer.classList.add("active");
+}
+
+// function for closing the video modal
+function CloseVideoModal() {
+  videoContainer.classList.remove("active");
+  videoFrame.src = videoFrame.src;
+}
+
+// Open modal when the button is clicked
+videoPlayBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  OpenVideoModal();
+});
+
+// Close modal when the close button is clicked
+videoCloseBtn.addEventListener("click", (e) => {
+  // e.preventDefault();
+  CloseVideoModal();
+});
+
+// Close modal when clicking outside the modal content
+videoContainer.addEventListener("click", (e) => {
+  if (e.target === videoContainer) {
+    CloseVideoModal();
+  }
+});

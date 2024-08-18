@@ -92,8 +92,29 @@
             <!-- TODO: embede a training video here  -->
 
             <div class="training_video">
-              <a href=""> <i class="fa-solid fa-circle-play"></i> </a>
-              <a href="">Watch training video example!</a>
+              <div class="play_button">
+                <a href=""> <i class="fa-solid fa-circle-play"></i> </a>
+                <a href="">Watch training video example!</a>
+              </div>
+
+              <div class="training_video_overlay">
+                <div id="training_video_container">
+                  <div class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+
+                  <iframe
+                    id="videoFrame"
+                    src="https://www.youtube.com/embed/XyvRTT0DvjI"
+                    title="YouTube video player"
+                    width="800px"
+                    height="600px"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
 

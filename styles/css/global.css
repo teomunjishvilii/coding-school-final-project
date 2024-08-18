@@ -553,12 +553,12 @@ main .section_1 .left_block p {
 main .section_1 .left_block .training_video {
   margin-top: 25px;
 }
-main .section_1 .left_block .training_video i {
+main .section_1 .left_block .training_video .play_button i {
   margin-right: 5px;
   color: #f21a09;
   cursor: pointer;
 }
-main .section_1 .left_block .training_video a {
+main .section_1 .left_block .training_video .play_button a {
   color: #c4c2c3;
   font-weight: 800;
   color: #c4c2c3;
@@ -566,8 +566,34 @@ main .section_1 .left_block .training_video a {
   font-weight: 800;
   line-height: normal;
 }
-main .section_1 .left_block .training_video a:nth-child(2) {
+main .section_1 .left_block .training_video .play_button a:nth-child(2) {
   text-decoration: underline;
+}
+main .section_1 .left_block .training_video .training_video_overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+main .section_1 .left_block .training_video .training_video_overlay.active {
+  display: flex;
+}
+main .section_1 .left_block .training_video .training_video_overlay #training_video_container .close {
+  position: absolute;
+  top: 10%;
+  right: 15%;
+  cursor: pointer;
+}
+main .section_1 .left_block .training_video .training_video_overlay #training_video_container .close i {
+  font-size: 30px;
+  color: #f21a09;
 }
 main .section_1 .right_block {
   width: 50%;

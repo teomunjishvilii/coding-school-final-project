@@ -9,7 +9,7 @@ burgerIcon.addEventListener("click", function () {
   overlay.classList.toggle("active");
   this.classList.toggle("active");
 
-  // delaying the addition of the .active class to the .join_us button
+  // delay the addition of the .active class to the .join_us button
   // until after the overlay's transition is complete
   if (overlay.classList.contains("active")) {
     overlay.appendChild(nav);
@@ -60,5 +60,18 @@ videoCloseBtn.addEventListener("click", (e) => {
 videoContainer.addEventListener("click", (e) => {
   if (e.target === videoContainer) {
     CloseVideoModal();
+  }
+});
+
+// display more text when clicked on  read more button and show less when clicked on read less.
+const readMoreBtn = document.querySelector(".read_more");
+const hiddenText = document.querySelector(".hidden_text");
+readMoreBtn.addEventListener("click", () => {
+  if (readMoreBtn.textContent === "read more") {
+    hiddenText.classList.add("visible");
+    readMoreBtn.textContent = "read less";
+  } else {
+    hiddenText.classList.remove("visible");
+    readMoreBtn.textContent = "read more";
   }
 });

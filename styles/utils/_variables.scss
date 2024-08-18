@@ -10,6 +10,10 @@ $button-background: #f21a09;
 // transitions
 $change-background-color: background-color 0.3s ease;
 $change-color: color 0.3s ease;
+$transform: transform 0.5s ease;
+$change-width: width 0.3s ease;
+$change-overlay-styles: opacity 0.5s ease-in-out, width 0.5s ease-in-out,
+  height 0.5s ease-in-out;
 
 // resolution
 $desktop-large-screen: 1200px;

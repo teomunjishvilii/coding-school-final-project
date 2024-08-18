@@ -76,9 +76,74 @@ main {
               right: 15%;
               cursor: pointer;
 
+              @media (max-width: 1200px) {
+                top: 8%;
+                right: 10%;
+              }
+
+              @media (max-width: 1080px) {
+                top: 8%;
+                right: 6%;
+              }
+
+              @media (max-width: 955px) {
+                top: 8%;
+                right: 4%;
+              }
+
+              @media (max-width: 770px) {
+                top: 17%;
+                right: 6%;
+              }
+
+              @media (max-width: 680px) {
+                top: 25%;
+                right: 6%;
+              }
+
+              @media (max-width: 625px) {
+                top: 22%;
+                right: 4%;
+              }
+
+              @media (max-width: 550px) {
+                top: 27%;
+              }
+
+              @media (max-width: 440px) {
+                top: 30%;
+              }
+
               i {
                 font-size: 30px;
                 color: $button-background;
+              }
+            }
+
+            iframe {
+              @media (max-width: 880px) {
+                width: 700px;
+                height: 500px;
+              }
+
+              @media (max-width: $tablet) {
+                width: 600px;
+                height: 400px;
+              }
+
+              @media (max-width: 680px) {
+                width: 500px;
+                height: 300px;
+              }
+
+              @media (max-width: 550px) {
+                width: 400px;
+                height: 200px;
+              }
+
+              @media (max-width: 440px) {
+                width: 300px;
+                height: 200px;
               }
             }
           }
@@ -144,6 +209,37 @@ main {
         @include text_font_style($logo-color, 14px, 300);
         line-height: 25px;
         width: 90%;
+
+        @media (max-width: 1160px) {
+          width: 100%;
+        }
+
+        span {
+          @media (max-width: $laptop-small-screen) {
+            display: block;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+          }
+
+          &.visible {
+            max-height: 500px;
+            opacity: 1;
+          }
+        }
+      }
+
+      .read_more {
+        @include text_font_style($button-background, 12px, 300);
+        cursor: pointer;
+        margin-top: 15px;
+        text-transform: uppercase;
+        display: none;
+
+        @media (max-width: $laptop-small-screen) {
+          display: block;
+        }
       }
     }
   }

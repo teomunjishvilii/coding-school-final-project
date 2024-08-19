@@ -24,6 +24,12 @@
 
     <!-- css link -->
     <link rel="stylesheet" href="styles/css/global.css" />
+
+    <!-- animate style link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body>
@@ -42,15 +48,16 @@
           <nav>
             <ul>
               <li><a href="">about us</a></li>
+
               <li><a href="">our trainers</a></li>
-              <!-- list of programs -->
-              <li><a href="">program</a></li>
+
               <!-- pricing -->
-              <li><a href="">packages</a></li>
+              <li><a href="">services</a></li>
               <!-- gym supplements go here -->
               <li><a href="">products</a></li>
+              <!-- use fetch here -->
               <li><a href="">testimonials</a></li>
-              <li><a href="">FAQs</a></li>
+              <li><a href="/pages/faqs.html">FAQs</a></li>
 
               <!-- map goes here-->
               <li><a href="">contact us</a></li>
@@ -161,13 +168,249 @@
         </div>
       </section>
 
-      <!-- section 3 - our trainers -->
+      <!-- section 3 - services -->
+      <section>
+        <div class="services_section container">
+          <h5>Services</h5>
+          <h3>What We Offer</h3>
+
+          <div class="services_list grid">
+            <!-- item 1 -->
+            <div class="item">
+              <p>Personal Training</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/personal-training.jpg"
+                  alt="personal-training"
+                />
+              </div>
+            </div>
+
+            <!-- item 2 -->
+            <div class="item">
+              <p>Group Fitness Classes</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/group-fitness-classes.jpg"
+                  alt="group-fitness-classes"
+                />
+              </div>
+            </div>
+
+            <!-- item 3 -->
+            <div class="item">
+              <p>Strength Training</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/strength-training.jpg"
+                  alt="strength-training"
+                />
+              </div>
+            </div>
+
+            <!-- item 4 -->
+            <div class="item">
+              <p>Cardio Equipment</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/cardio_equipment.jpg"
+                  alt="cardio-equipment"
+                />
+              </div>
+            </div>
+
+            <!-- item 5 -->
+            <div class="item">
+              <p>Swimming Pool</p>
+
+              <div class="img_wrapper">
+                <img src="/assets/swimming-pool.jpg" alt="swimming-pool" />
+              </div>
+            </div>
+
+            <!-- item 6 -->
+            <div class="item">
+              <p>Spa and Recovery Services</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/spa-and-recovery-services.jpg"
+                  alt="spa-and-recovery-services"
+                />
+              </div>
+            </div>
+
+            <!-- item 7 -->
+            <div class="item">
+              <p>Nutritional Counseling</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/nutritional-counceling.jpg"
+                  alt="nutritional-counceling"
+                />
+              </div>
+            </div>
+
+            <!-- item 8 -->
+            <div class="item">
+              <p>Wellness Programs</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/wellness-programs.jpg"
+                  alt="wellness-programs"
+                />
+              </div>
+            </div>
+
+            <!-- item 9 -->
+            <div class="item">
+              <p>Virtual Training</p>
+
+              <div class="img_wrapper">
+                <img
+                  src="/assets/virtual-training.jpg"
+                  alt="virtual-training"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 4 - our trainers -->
       <section>
         <div class="our_trainers_section container">
           <h5>our trainers</h5>
           <h3>Meet Our Best Trainers</h3>
+          <p>TODO: slider goes here</p>
 
           <!-- TODO: slider goes here-->
+        </div>
+      </section>
+
+      <!-- section 5 - our products -->
+      <section>
+        <div class="our_products_section container">
+          <h5>our products</h5>
+          <h3>World's Best Products</h3>
+
+          <div class="our_products_section_wrapper">
+            <!-- left block -->
+            <div class="left_block">
+              <h4>Optimum Nutrition Serious Mass Protein</h4>
+              <p>
+                When selecting a protein supplement, Optimum Nutrition Serious
+                Mass stands out with its high protein and calorie-dense formula,
+                supporting muscle growth and recovery to help you reach your
+                fitness goals.
+              </p>
+
+              <div class="img_block">
+                <div class="image">
+                  <img
+                    src="/assets/optimum-nutrition-serious-mass-protein.png"
+                    alt="optimum-nutrition-serious-mass-protein"
+                  />
+                </div>
+
+                <div class="image">
+                  <img
+                    src="/assets/optimum-nutrition-serious-mass-protein-small-package.png"
+                    alt="optimum-nutrition-serious-mass-protein-small-package"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- right block -->
+            <div class="right_block">
+              <!-- products div -->
+              <div class="products">
+                <!-- product #1 -->
+                <div class="each_product">
+                  <div class="image">
+                    <img src="/assets/whey-protein.png" alt="whey-protein" />
+                  </div>
+
+                  <h5>Gold Protinex</h5>
+                  <p class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </p>
+                  <p class="price">$87.49</p>
+                </div>
+
+                <!-- product #2-->
+                <div class="each_product">
+                  <div class="image">
+                    <img src="/assets/mass-gainer.png" alt="mass-gainer" />
+                  </div>
+
+                  <h5>MuscleMass Gainer</h5>
+                  <p class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="price">$41.99</p>
+                </div>
+
+                <!-- product #3-->
+                <div class="each_product">
+                  <div class="image">
+                    <img src="/assets/steel-dumble.png" alt="steel-dumble" />
+                  </div>
+
+                  <h5>15lb Steel Dumble</h5>
+
+                  <p class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </p>
+                  <p class="price">$65.46</p>
+                </div>
+
+                <!-- product #4-->
+                <div class="each_product">
+                  <div class="image">
+                    <img src="/assets/gasp-tee.png" alt="gasp-tee" />
+                  </div>
+
+                  <h5>GASP Iron Tee</h5>
+
+                  <p class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </p>
+                  <p class="price">$38.99</p>
+                </div>
+              </div>
+
+              <!-- button div -->
+              <div class="view_all">
+                <a href=""
+                  >view all <span><i class="fa-solid fa-arrow-right"></i></span
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>

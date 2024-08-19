@@ -1,0 +1,73 @@
+main {
+  .faqs_page {
+    margin-top: 80px;
+
+    .faqs_page_container {
+      max-width: 800px;
+      width: 100%;
+
+      h5 {
+        font-size: 15px;
+      }
+
+      h3 {
+        font-size: 35px;
+      }
+
+      .faqs_wrapper {
+        margin: 100px 0;
+
+        .faqs_inside_div {
+          border-bottom: 1px solid #dfdfdf;
+
+          .faqs_item {
+            &.active {
+              .question {
+                background: linear-gradient(145deg, #444, #222);
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+                  /* First layer of shadow */ 0 5px 15px rgba(0, 0, 0, 0.1),
+                  /* Second layer, softer */ inset 0 1px 0
+                    rgba(255, 255, 255, 0.2),
+                  /* Highlight on top edge */ inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+              }
+
+              .answer {
+                height: 100px;
+              }
+            }
+
+            .question {
+              display: flex;
+              justify-content: space-between;
+              border-bottom: 1px solid $logo-color;
+              padding: 20px;
+              cursor: pointer;
+              @include text_font_style($nav-elements-color, 22px, 500);
+
+              .arrow {
+                color: $logo-color;
+                font-size: 20px;
+              }
+            }
+
+            .answer {
+              height: 0;
+              overflow: hidden;
+              transition: height 0.5s ease-out;
+              @include text_font_style($logo-color, 18px, 300);
+
+              p {
+                line-height: 25px;
+                padding: 20px;
+
+                span {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

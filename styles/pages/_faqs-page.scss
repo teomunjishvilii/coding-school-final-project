@@ -25,10 +25,9 @@ main {
               .question {
                 background: linear-gradient(145deg, #444, #222);
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
-                  /* First layer of shadow */ 0 5px 15px rgba(0, 0, 0, 0.1),
-                  /* Second layer, softer */ inset 0 1px 0
-                    rgba(255, 255, 255, 0.2),
-                  /* Highlight on top edge */ inset 0 -1px 2px rgba(0, 0, 0, 0.3);
+                  0 5px 15px rgba(0, 0, 0, 0.1),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                  inset 0 -1px 2px rgba(0, 0, 0, 0.3);
               }
 
               .answer {

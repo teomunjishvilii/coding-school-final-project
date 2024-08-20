@@ -47,20 +47,18 @@
         <div class="navigation">
           <nav>
             <ul>
-              <li><a href="">about us</a></li>
+                <a href="#about_us_section">about us</a>
+                <ul class="submenu">
+                  <li><a href="#services_section">services</a></li>
+                  <li><a href="#trainers_section">our trainers</a></li>
+                  <li><a href="/pages/products.html">products</a></li>
+                </ul>
+              </li>
 
-              <li><a href="">our trainers</a></li>
-
-              <!-- pricing -->
-              <li><a href="">services</a></li>
-              <!-- gym supplements go here -->
-              <li><a href="">products</a></li>
-              <!-- use fetch here -->
-              <li><a href="">testimonials</a></li>
+              <li><a href="#testimonials_section">testimonials</a></li>
               <li><a href="/pages/faqs.html">FAQs</a></li>
 
-              <!-- map goes here-->
-              <li><a href="">contact us</a></li>
+              <li><a href="#contact_us_section">contact us</a></li>
             </ul>
           </nav>
         </div>
@@ -69,7 +67,7 @@
 
         <!-- join us button -->
         <div class="join_us">
-          <a href="">join now</a>
+          <a href="#contact_us_section">join now</a>
         </div>
 
         <!-- burger menu icon -->
@@ -134,10 +132,10 @@
 
       <!-- section 2 - about us -->
       <section>
-        <div class="about_us_section container">
+        <div class="about_us_section container" id="about_us_section">
           <!-- left block-->
           <div class="left_block">
-            <a href="">Join Now</a>
+            <a href="#contact_us_section">Join Now</a>
           </div>
 
           <!-- middle block-->
@@ -170,7 +168,7 @@
 
       <!-- section 3 - services -->
       <section>
-        <div class="services_section container">
+        <div class="services_section container" id="services_section">
           <h5>Services</h5>
           <h3>What We Offer</h3>
 
@@ -280,12 +278,14 @@
               </div>
             </div>
           </div>
+
+          <p class="read_more read_more_services">read more</p>
         </div>
       </section>
 
       <!-- section 4 - our trainers -->
       <section>
-        <div class="our_trainers_section container">
+        <div class="our_trainers_section container" id="trainers_section">
           <h5>our trainers</h5>
           <h3>Meet Our Best Trainers</h3>
           <p>TODO: slider goes here</p>
@@ -296,7 +296,7 @@
 
       <!-- section 5 - our products -->
       <section>
-        <div class="our_products_section container">
+        <div class="our_products_section container" id="products_section">
           <h5>our products</h5>
           <h3>World's Best Products</h3>
 
@@ -405,9 +405,213 @@
 
               <!-- button div -->
               <div class="view_all">
-                <a href=""
+                <a href="/pages/products.html"
                   >view all <span><i class="fa-solid fa-arrow-right"></i></span
                 ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 6 - testimonials -->
+      <section>
+        <div class="testimonials_section container" id="testimonials_section">
+          <h5>testimonials</h5>
+          <h3>What People Says</h3>
+        </div>
+      </section>
+
+      <!-- section 7 - contact us -->
+      <section>
+        <div class="contact_us_section" id="contact_us_section">
+          <div class="container">
+            <!-- left block -->
+            <div class="left_block">
+              <h3>Contact us</h3>
+
+              <div class="contact_info">
+                <!-- email -->
+                <div class="contact">
+                  <span><i class="fa-regular fa-envelope"></i></span>
+                  <a href="mailto:premiumfitness@gmail.com"
+                    >premiumfitness@gmail.com</a
+                  >
+                </div>
+
+                <!--  address -->
+                <div class="contact">
+                  <span><i class="fa-solid fa-location-dot"></i></span>
+                  <a
+                    href="https://www.google.com/maps/place/Snap+Fitness/@41.7105022,44.7649808,18.73z/data=!4m15!1m8!3m7!1s0x404473323b89dc1b:0xf515495c604f2072!2s29+Ilia+Chavchavadze+Avenue,+T'bilisi!3b1!8m2!3d41.7110212!4d44.7668909!16s%2Fg%2F11c1kmct8f!3m5!1s0x40447333cc18fce9:0xb9e037904357b3f9!8m2!3d41.7102827!4d44.7655463!16s%2Fg%2F11c1r_v3r4?entry=ttu"
+                    >29 Ilia Chavchavadze Avenue, Tbilisi</a
+                  >
+                </div>
+
+                <!-- phone number -->
+                <div class="contact">
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <a href="tel:5551234567">(555) 123-4567</a>
+                </div>
+              </div>
+
+              <div class="social_media_icons">
+                <a href="https://www.facebook.com/"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="https://x.com/?lang=en"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
+                <a href="https://www.instagram.com/"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+
+              <div class="map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.6838429822085!2d44.764980792396614!3d41.71050215291084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447333cc18fce9%3A0xb9e037904357b3f9!2sSnap%20Fitness!5e0!3m2!1sen!2sge!4v1724083188737!5m2!1sen!2sge"
+                  width="500"
+                  height="250"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- right block -->
+
+            <div class="right_block">
+              <h3>Join Now</h3>
+              <div class="contact_form_wrapper">
+                <form action="">
+                  <!-- firstname -->
+                  <input
+                    type="text"
+                    id="firstname"
+                    name="firstname"
+                    placeholder="First Name"
+                    required
+                  />
+
+                  <!-- lastname -->
+                  <input
+                    type="text"
+                    id="lastname"
+                    name="lastname"
+                    placeholder="Last Name"
+                  />
+
+                  <!-- email -->
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                  />
+
+                  <!-- trainer -->
+                  <div class="trainer_dropdown">
+                    <button class="dropbtn_trainer">
+                      Choose a Trainer
+                      <span><i class="fa-solid fa-angle-down"></i></span>
+                    </button>
+
+                    <div class="dropdown-content">
+                      <!-- option 1 -->
+                      <div>
+                        <input
+                          type="radio"
+                          name="trainer"
+                          value="trainer1"
+                          id="trainer1"
+                        />
+                        <label for="trainer1"> Trainer 1</label>
+                      </div>
+
+                      <!-- option 2 -->
+                      <div>
+                        <input
+                          type="radio"
+                          name="trainer"
+                          value="trainer2"
+                          id="trainer2"
+                        />
+                        <label for="trainer2"> Trainer 2</label>
+                      </div>
+
+                      <!-- option 3 -->
+                      <div>
+                        <input
+                          type="radio"
+                          name="trainer"
+                          value="trainer3"
+                          id="trainer3"
+                        />
+                        <label for="trainer3"> Trainer 3</label>
+                      </div>
+
+                      <!-- option 4 -->
+                      <div>
+                        <input
+                          type="radio"
+                          name="trainer"
+                          value="trainer4"
+                          id="trainer4"
+                        />
+                        <label for="trainer4"> Trainer 4</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- program -->
+                  <div class="program_dropdown">
+                    <button class="dropbtn">
+                      Choose a Program
+                      <span><i class="fa-solid fa-angle-down"></i></span>
+                    </button>
+
+                    <div class="dropdown-content">
+                      <!-- option 1 -->
+                      <div>
+                        <input
+                          type="checkbox"
+                          name="weight-loss"
+                          value="weight-loss"
+                          id="weight-loss"
+                        />
+                        <label for="weight-loss"> Weight Loss</label>
+                      </div>
+
+                      <!-- option 2 -->
+                      <div>
+                        <input
+                          type="checkbox"
+                          name="muscle-gain"
+                          value="muscle-gain"
+                          id="muscle-gain"
+                        />
+                        <label for="muscle-gain"> Muscle Gain</label>
+                      </div>
+
+                      <!-- option 3 -->
+                      <div>
+                        <input
+                          type="checkbox"
+                          name="endurance-training"
+                          value="endurance-training"
+                          id="endurance-training"
+                        />
+                        <label for="endurance-training">
+                          Endurance Training</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <input type="submit" value="Submit" />
+                </form>
               </div>
             </div>
           </div>
@@ -416,7 +620,43 @@
     </main>
 
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <div class="footer_wrapper container">
+        <div class="top_row">
+          <!-- logo -->
+          <div class="logo">
+            <a href="index.html"><img src="./assets/logo.jpg" alt="logo" /></a>
+            <a href="index.html"> PREMIUM </a>
+            <a href="index.html"> FITNESS</a>
+          </div>
+
+          <div class="column_1">
+            <p>about</p>
+            <ul>
+              <li><a href="#about_us_section">About Us</a></li>
+              <li><a href="#services_section">Services</a></li>
+              <li><a href="#trainers_section">Our Trainers</a></li>
+              <li><a href="/pages/products.html">Products</a></li>
+              <li><a href="">Terms and Conditions</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="column_2">
+            <p>Support</p>
+            <ul>
+              <li><a href="#testimonials_section">Testimonials</a></li>
+              <li><a href="/pages/faqs.html">FAQs</a></li>
+              <li><a href="#contact_us_section">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom_row">
+          <p>&copy; Copyright 2024, Premium Fitness. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- JavaScript link -->
     <script src="js/script.js"></script>

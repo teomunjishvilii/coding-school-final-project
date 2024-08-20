@@ -1,17 +1,21 @@
-body {
-  background-color: $main-background;
+html {
+  scroll-behavior: smooth;
 
-  .container {
-    max-width: 1300px;
-    width: 100%;
-    margin: 0 auto;
+  body {
+    background-color: $main-background;
 
-    @media (max-width: 1370px) {
-      width: 92%;
-    }
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
 
-    @media (max-width: 715px) {
-      width: 88%;
+      @media (max-width: 1370px) {
+        width: 92%;
+      }
+
+      @media (max-width: 715px) {
+        width: 88%;
+      }
     }
 
     h5 {
@@ -26,6 +30,10 @@ body {
       @media (max-width: 870px) {
         margin-bottom: 10px;
         font-size: 10px;
+      }
+
+      @media (max-width: 715px) {
+        font-size: 14px;
       }
     }
 
@@ -44,12 +52,26 @@ body {
         bottom: -20px;
       }
 
+      @media (max-width: 715px) {
+        width: 200px;
+        margin: 0 auto;
+
+        &::after {
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+
       @media (max-width: $laptop-small-screen) {
         font-size: 28px;
       }
 
       @media (max-width: 870px) {
         font-size: 25px;
+      }
+
+      @media (max-width: 715px) {
+        font-size: 28px;
       }
     }
   }

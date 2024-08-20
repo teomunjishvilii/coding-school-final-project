@@ -1,0 +1,114 @@
+footer {
+  // general styles
+  p {
+    @include text_font_style($form-elements-color, 15px, 400);
+    text-transform: uppercase;
+  }
+
+  // general styles
+  ul {
+    li {
+      font-family: $font-primary;
+
+      &:not(:first-child) {
+        margin-top: 12px;
+      }
+
+      &:first-child {
+        margin-top: 18px;
+      }
+
+      a {
+        @include text_font_style($logo-color, 13px, 400);
+        position: relative;
+
+        &::after {
+          display: inline-block;
+          content: "";
+          width: 0%;
+          height: 2px;
+          background-color: $button-background;
+          transition: $change-width;
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // parent-child starts from here
+
+  .footer_wrapper {
+    padding-top: 100px;
+
+    .top_row {
+      @include flex(space-between);
+      border-bottom: 1px solid $footer-border-color;
+      padding-bottom: 100px;
+
+      .logo {
+        width: 30%;
+        cursor: pointer;
+
+        a {
+          color: $logo-color;
+          display: block;
+          text-align: center;
+
+          @media (max-width: 715px) {
+            font-size: 12px;
+          }
+
+          &:nth-child(1) {
+            margin-bottom: 10px;
+          }
+          img {
+            width: 60%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      .column_1,
+      .column_2 {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+          @media (max-width: 440px) {
+            text-align: center;
+          }
+        }
+
+        ul {
+          @media (max-width: 440px) {
+            text-align: center;
+          }
+        }
+      }
+
+      .column_1 {
+        p {
+          margin-left: -70px;
+
+          @media (max-width: 460px) {
+            margin-left: -65px;
+          }
+        }
+      }
+    }
+
+    .bottom_row {
+      p {
+        @include text_font_style($logo-color, 13px, 400);
+        margin: 50px 0;
+      }
+    }
+  }
+}

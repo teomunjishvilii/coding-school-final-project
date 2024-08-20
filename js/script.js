@@ -19,10 +19,6 @@ burgerIcon.addEventListener("click", function () {
     }, 500); // Delay matches the transition time of the overlay (0.5s)
   } else {
     joinNowBtn.classList.remove("active");
-    setTimeout(() => {
-      document.body.appendChild(nav);
-      document.body.appendChild(joinNowBtn);
-    }, 500); // Delay to allow smooth transition out
   }
 });
 
@@ -63,9 +59,10 @@ videoContainer.addEventListener("click", (e) => {
   }
 });
 
-// display more text when clicked on  read more button and show less when clicked on read less.
+// display more text when clicked on  read more button and show less when clicked on read less on about us section
 const readMoreBtn = document.querySelector(".read_more");
 const hiddenText = document.querySelector(".hidden_text");
+
 readMoreBtn.addEventListener("click", () => {
   if (readMoreBtn.textContent === "read more") {
     hiddenText.classList.add("visible");
@@ -74,4 +71,43 @@ readMoreBtn.addEventListener("click", () => {
     hiddenText.classList.remove("visible");
     readMoreBtn.textContent = "read more";
   }
+});
+
+// display more text when clicked on  read more button and show less when clicked on read less on services section
+const readMoreBtnServices = document.querySelector(".read_more_services");
+const serviceItems = document.querySelectorAll(".item");
+
+readMoreBtnServices.addEventListener("click", () => {
+  const isReadMore =
+    readMoreBtnServices.textContent.toLowerCase() === "read more";
+
+  serviceItems.forEach((item, index) => {
+    if (index >= 4) {
+      if (isReadMore) {
+        item.classList.add("visible");
+        readMoreBtnServices.style.marginTop = "-60px";
+      } else {
+        item.classList.remove("visible");
+        readMoreBtnServices.style.marginTop = "-120px";
+      }
+    }
+  });
+
+  readMoreBtnServices.textContent = isReadMore ? "Read Less" : "Read More";
+});
+
+// handle program and trainer selections in the contact form
+document.addEventListener("DOMContentLoaded", function () {
+  const dropbtn = document.querySelector(".dropbtn");
+  const programDropdown = document.querySelector(".program_dropdown");
+  const dropbtnTrainer = document.querySelector(".dropbtn_trainer");
+  const trainerDropdown = document.querySelector(".trainer_dropdown");
+
+  dropbtn.addEventListener("click", function () {
+    programDropdown.classList.toggle("active");
+  });
+
+  dropbtnTrainer.addEventListener("click", function () {
+    trainerDropdown.classList.toggle("active");
+  });
 });

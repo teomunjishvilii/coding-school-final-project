@@ -12,22 +12,6 @@ header {
       width: 12%;
       cursor: pointer;
 
-      @media (max-width: $desktop-large-screen) {
-        width: 11%;
-      }
-
-      @media (max-width: $laptop-small-screen) {
-        width: 10%;
-      }
-
-      @media (max-width: 960px) {
-        width: 8%;
-      }
-
-      @media (max-width: 870px) {
-        width: 6%;
-      }
-
       @media (max-width: 715px) {
         width: 10%;
       }
@@ -36,18 +20,6 @@ header {
         color: $logo-color;
         display: block;
         text-align: center;
-
-        @media (max-width: 960px) {
-          font-size: 10px;
-        }
-
-        @media (max-width: 870px) {
-          font-size: 9px;
-        }
-
-        @media (max-width: 780px) {
-          font-size: 8px;
-        }
 
         @media (max-width: 715px) {
           font-size: 12px;
@@ -96,6 +68,16 @@ header {
             font-family: $font-primary;
             position: relative;
 
+            &:first-child {
+              &:hover {
+                .submenu {
+                  max-height: 400px;
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+            }
+
             &::after {
               display: inline-block;
               content: "";
@@ -112,32 +94,26 @@ header {
               width: 100%;
             }
 
+            .submenu {
+              flex-direction: column;
+              row-gap: 15px;
+              position: absolute;
+              top: 100%;
+              padding-top: 30px;
+              max-height: 0;
+              overflow: hidden;
+              opacity: 0;
+              visibility: hidden;
+              transition: max-height 0.5s ease, opacity 0.5s ease,
+                visibility 0.5s ease;
+            }
+
             a {
               text-transform: uppercase;
               @include text_font_style($nav-elements-color, 15px, 400);
 
               @media (max-width: 1310px) {
                 font-size: 13px;
-              }
-
-              @media (max-width: $desktop-large-screen) {
-                font-size: 11px;
-              }
-
-              @media (max-width: $laptop-small-screen) {
-                font-size: 10px;
-              }
-
-              @media (max-width: 960px) {
-                font-size: 9px;
-              }
-
-              @media (max-width: 870px) {
-                font-size: 8px;
-              }
-
-              @media (max-width: 780px) {
-                font-size: 7px;
               }
 
               @media (max-width: 715px) {
@@ -148,137 +124,117 @@ header {
         }
       }
     }
+  }
 
-    .overlay {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 0;
-      height: 0;
-      background: rgba(0, 0, 0, 0.8);
-      opacity: 0;
-      z-index: 5;
-      transition: $change-overlay-styles;
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    z-index: 5;
+    transition: $change-overlay-styles;
 
-      &.active {
-        opacity: 0.96;
-        width: 100%;
-        height: 100%;
+    &.active {
+      opacity: 0.96;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .join_us {
+    background-color: $button-background;
+    padding: 10px 20px;
+    border-radius: 7px;
+    transition: $change-background-color;
+    cursor: pointer;
+
+    @media (max-width: 715px) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $nav-elements-color;
+
+      a {
+        color: $button-background;
       }
     }
 
-    .join_us {
-      background-color: $button-background;
-      padding: 10px 20px;
-      border-radius: 7px;
-      transition: $change-background-color;
-      cursor: pointer;
+    &.active {
+      display: block;
+      position: fixed;
+      bottom: 11%;
+      left: 50%;
+      transform: (translate(-50%));
+      z-index: 7;
+    }
+
+    a {
+      text-transform: uppercase;
+      @include text_font_style($nav-elements-color, 15px, 400);
+      transition: $change-color;
+
+      @media (max-width: 1310px) {
+        font-size: 13px;
+      }
 
       @media (max-width: 715px) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .burger_menu_icon {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 715px) {
+      display: flex;
+    }
+
+    &.active {
+      position: fixed;
+      top: 30px;
+      right: 40px;
+      z-index: 7;
+
+      .line1 {
+        top: 80%;
+        transform: rotate(45deg);
+      }
+
+      .line2 {
         display: none;
       }
 
-      &:hover {
-        background-color: $nav-elements-color;
-
-        a {
-          color: $button-background;
-        }
-      }
-
-      &.active {
-        display: block;
-        position: fixed;
-        bottom: 11%;
-        left: 50%;
-        transform: (translate(-50%));
-        z-index: 7;
-      }
-
-      a {
-        text-transform: uppercase;
-        @include text_font_style($nav-elements-color, 15px, 400);
-        transition: $change-color;
-
-        @media (max-width: 1310px) {
-          font-size: 13px;
-        }
-
-        @media (max-width: $desktop-large-screen) {
-          font-size: 11px;
-        }
-
-        @media (max-width: $laptop-small-screen) {
-          font-size: 10px;
-        }
-
-        @media (max-width: 960px) {
-          font-size: 9px;
-        }
-
-        @media (max-width: 870px) {
-          font-size: 8px;
-        }
-
-        @media (max-width: 780px) {
-          font-size: 7px;
-        }
-
-        @media (max-width: 715px) {
-          font-size: 15px;
-        }
+      .line3 {
+        top: 80%;
+        transform: rotate(-225deg);
       }
     }
 
-    .burger_menu_icon {
-      width: 35px;
-      height: 35px;
-      position: relative;
-      cursor: pointer;
-      display: none;
+    .line {
+      width: 100%;
+      height: 2px;
+      background-color: $logo-color;
+      border-radius: 7px;
+      position: absolute;
+      top: 50%;
+      transition: $transform;
+    }
 
-      @media (max-width: 715px) {
-        display: flex;
-      }
+    .line1 {
+      top: 25%;
+    }
 
-      &.active {
-        position: fixed;
-        top: 30px;
-        right: 40px;
-        z-index: 7;
-
-        .line1 {
-          top: 80%;
-          transform: rotate(45deg);
-        }
-
-        .line2 {
-          display: none;
-        }
-
-        .line3 {
-          top: 80%;
-          transform: rotate(-225deg);
-        }
-      }
-
-      .line {
-        width: 100%;
-        height: 2px;
-        background-color: $logo-color;
-        border-radius: 7px;
-        position: absolute;
-        top: 50%;
-        transition: $transform;
-      }
-
-      .line1 {
-        top: 25%;
-      }
-
-      .line3 {
-        top: 75%;
-      }
+    .line3 {
+      top: 75%;
     }
   }
 }

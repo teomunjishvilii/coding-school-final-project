@@ -9,12 +9,16 @@ $button-background: #f21a09;
 $rating-color: #febf71;
 $form-elements-color: #757575;
 $footer-border-color: #5c5c5c;
+$unavailable-product-bg-color: #d9d9d9;
+$unavailable-product-color: #837f7f;
+$product-overlay-bg-color: #efefef;
 
 // transitions
 $change-background-color: background-color 0.3s ease;
 $change-color: color 0.3s ease;
 $transform: transform 0.5s ease;
 $change-width: width 0.3s ease;
+$change-border-color: border-color 0.3s ease;
 $change-overlay-styles: opacity 0.5s ease-in-out, width 0.5s ease-in-out,
   height 0.5s ease-in-out;
 

@@ -419,7 +419,7 @@ footer .footer_wrapper {
 footer .footer_wrapper .top_row {
   display: flex;
   justify-content: space-between;
-  align-items: c;
+  align-items: top;
   border-bottom: 1px solid #5c5c5c;
   padding-bottom: 100px;
 }
@@ -451,6 +451,18 @@ footer .footer_wrapper .top_row .column_2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 440px) {
+  footer .footer_wrapper .top_row .column_1 p,
+  footer .footer_wrapper .top_row .column_2 p {
+    text-align: center;
+  }
+}
+@media (max-width: 440px) {
+  footer .footer_wrapper .top_row .column_1 ul,
+  footer .footer_wrapper .top_row .column_2 ul {
+    text-align: center;
+  }
 }
 footer .footer_wrapper .top_row .column_1 p {
   margin-left: -70px;
@@ -1741,4 +1753,179 @@ main .faqs_page .faqs_page_container .faqs_wrapper .faqs_inside_div .faqs_item .
 }
 main .faqs_page .faqs_page_container .faqs_wrapper .faqs_inside_div .faqs_item .answer p span {
   font-weight: bold;
+}
+
+main .products_page .show_filters {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+  width: 152px;
+  margin-top: 80px;
+}
+main .products_page .show_filters i,
+main .products_page .show_filters p {
+  color: #757575;
+  font-size: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+main .products_page .products_wrapper .filters {
+  width: 20%;
+}
+main .products_page .products_wrapper .products {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  flex-wrap: wrap;
+}
+main .products_page .products_wrapper .products .product_block {
+  width: 22%;
+  margin-top: 50px;
+}
+main .products_page .products_wrapper .products .product_block .product_image {
+  width: 100%;
+  cursor: pointer;
+}
+main .products_page .products_wrapper .products .product_block .product_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 7px;
+}
+main .products_page .products_wrapper .products .product_block h6 {
+  color: #757575;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  cursor: pointer;
+}
+main .products_page .products_wrapper .products .product_block .price {
+  color: #5c5c5c;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  margin: 10px 0;
+}
+main .products_page .products_wrapper .products .product_block .rating i {
+  color: #f21a09;
+  font-size: 14px;
+}
+main .products_page .products_wrapper .products .product_block .overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content {
+  width: 70%;
+  height: auto;
+  background-color: #efefef;
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5), -6px -6px 15px rgba(255, 255, 255, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_image {
+  width: 50%;
+  height: 100%;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description {
+  width: 50%;
+  padding: 0 30px;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description h6 {
+  color: #000000;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .price {
+  color: #837f7f;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: normal;
+  margin: 40px 0;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .flavor p {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: normal;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .flavor .flavor_blocks {
+  padding-top: 15px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  row-gap: 10px;
+  width: 70%;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .flavor .flavor_blocks p {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  border: 1px solid #c4c2c3;
+  border-radius: 7px;
+  padding: 7px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .flavor .flavor_blocks p:hover {
+  border-color: #000000;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .flavor .flavor_blocks p.unavailable {
+  background-color: #d9d9d9;
+  color: #837f7f;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .flavor .flavor_blocks p.unavailable:hover {
+  border-color: #c4c2c3;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .description {
+  margin-top: 40px;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .description p:first-child {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: normal;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .product_description .description p:last-child {
+  margin-top: 15px;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: normal;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .close_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+main .products_page .products_wrapper .products .product_block .overlay .overlay_content .close_btn i {
+  font-size: 25px;
+  color: #000000;
 }/*# sourceMappingURL=global.css.map */

@@ -1,0 +1,192 @@
+main {
+  .products_page {
+    .show_filters {
+      @include flex(left, center);
+      column-gap: 8px;
+      width: 152px;
+      margin-top: 80px;
+
+      i,
+      p {
+        color: $form-elements-color;
+        font-size: 15px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+
+      .filter_icon {
+        i {
+        }
+      }
+
+      .arrow {
+        i {
+        }
+      }
+    }
+
+    .products_wrapper {
+      .filters {
+        width: 20%;
+      }
+
+      .products {
+        @include flex(space-between, top);
+        flex-wrap: wrap;
+
+        .product_block {
+          width: 22%;
+          margin-top: 50px;
+
+          .product_image {
+            width: 100%;
+            cursor: pointer;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              border-radius: 7px;
+            }
+          }
+
+          h6 {
+            @include text_font_style($form-elements-color, 16px, 400);
+            margin-top: 20px;
+            cursor: pointer;
+          }
+
+          .price {
+            @include text_font_style($footer-border-color, 16px, 800);
+            margin: 10px 0;
+          }
+
+          .rating {
+            i {
+              color: $button-background;
+              font-size: 14px;
+            }
+          }
+
+          .overlay {
+            background-color: rgba(0, 0, 0, 0.85);
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            display: none;
+
+            .overlay_content {
+              width: 70%;
+              height: auto;
+              background-color: $product-overlay-bg-color;
+              box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.5),
+                -6px -6px 15px rgba(255, 255, 255, 0.1);
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              @include flex(space-between, center);
+              border-radius: 7px;
+
+              .product_image {
+                width: 50%;
+                height: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
+              }
+
+              .product_description {
+                width: 50%;
+                padding: 0 30px;
+
+                h6 {
+                  @include text_font_style($main-background, 32px, 800);
+                }
+
+                .price {
+                  @include text_font_style(
+                    $unavailable-product-color,
+                    20px,
+                    300
+                  );
+                  margin: 40px 0;
+                }
+
+                .flavor {
+                  p {
+                    @include text_font_style($main-background, 17px, 800);
+                  }
+
+                  .flavor_blocks {
+                    padding-top: 15px;
+                    @include flex(left, center);
+                    flex-wrap: wrap;
+                    column-gap: 10px;
+                    row-gap: 10px;
+                    width: 70%;
+
+                    p {
+                      @include text_font_style($main-background, 16px, 300);
+                      border: 1px solid $logo-color;
+                      border-radius: 7px;
+                      padding: 7px;
+                      cursor: pointer;
+                      transition: $change-border-color;
+
+                      &:hover {
+                        border-color: $main-background;
+                      }
+
+                      &.unavailable {
+                        background-color: $unavailable-product-bg-color;
+                        color: $unavailable-product-color;
+
+                        &:hover {
+                          border-color: $logo-color;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .description {
+                  margin-top: 40px;
+
+                  p {
+                    &:first-child {
+                      @include text_font_style($main-background, 17px, 800);
+                    }
+
+                    &:last-child {
+                      margin-top: 15px;
+                      @include text_font_style($main-background, 17px, 300);
+                    }
+                  }
+                }
+              }
+
+              .close_btn {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+
+                i {
+                  font-size: 25px;
+                  color: $main-background;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

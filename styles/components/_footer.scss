@@ -47,13 +47,23 @@ footer {
     padding-top: 100px;
 
     .top_row {
-      @include flex(space-between, top);
+      @include flex(left, top);
+      border-top: 1px solid $footer-border-color;
       border-bottom: 1px solid $footer-border-color;
-      padding-bottom: 100px;
+      padding: 100px 0;
+      column-gap: 15%;
 
       .logo {
-        width: 30%;
+        width: 12%;
         cursor: pointer;
+
+        @media (max-width: 600px) {
+          width: 15%;
+        }
+
+        @media (max-width: 420px) {
+          width: 20%;
+        }
 
         a {
           color: $logo-color;
@@ -68,7 +78,7 @@ footer {
             margin-bottom: 10px;
           }
           img {
-            width: 60%;
+            width: 100%;
             object-fit: contain;
           }
         }
@@ -76,31 +86,8 @@ footer {
 
       .column_1,
       .column_2 {
-        width: 30%;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        p {
-          @media (max-width: 440px) {
-            text-align: center;
-          }
-        }
-
-        ul {
-          @media (max-width: 440px) {
-            text-align: center;
-          }
-        }
-      }
-
-      .column_1 {
-        p {
-          margin-left: -70px;
-
-          @media (max-width: 460px) {
-            margin-left: -65px;
-          }
-        }
       }
     }
 

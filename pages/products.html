@@ -82,6 +82,7 @@
     </div>
   </header>
 
+  <!-- main content -->
   <main>
     <div class="products_page container">
       <h5>Our Products</h5>
@@ -95,14 +96,90 @@
 
       <div class="products_wrapper">
         <!-- filter -->
-        <div class="filters"></div>
+        <div class="filters">
+          <!-- category filter -->
+          <div class="flavor_div">
+            <p>category</p>
+
+            <div class="flavor_options">
+              <label class="option"
+                >Whey Protein
+                <input type="checkbox" value="Whey Protein" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Mass Weight Gainers
+                <input type="checkbox" value="Mass Weight Gainers" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Casein Protein
+                <input type="checkbox" value="Casein Protein" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Plant Protein
+                <input type="checkbox" value="Plant Protein" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Protein Bars & Snacks
+                <input type="checkbox" value="Protein Bars & Snacks" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Pre-Workout
+                <input type="checkbox" value="Pre-Workout" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Post Workout
+                <input type="checkbox" value="Post Workout" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="option"
+                >Creatine
+                <input type="checkbox" value="Creatine" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+
+          <!-- price filter -->
+          <div class="price_div">
+            <p>Price</p>
+
+            <div class="price_filter">
+              <div class="min_price">
+                <label for="min_price">Min:</label>
+                <input type="number" id="min_price" value="0" />
+              </div>
+
+              <div class="max_price">
+                <label for="max_price">Max:</label>
+                <input type="number" id="max_price" value="1000" />
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- products-->
         <div class="products">
           <!--------------------- whey protein products --------------------->
 
           <!-- whey protein product #1 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="79.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/whey-protein-powder-1.webp"
@@ -165,7 +242,11 @@
           </div>
 
           <!-- whey protein product #2 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="33.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/muscle-whey-protein-2.webp"
@@ -230,7 +311,11 @@
           </div>
 
           <!-- whey protein product #3 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="49.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/pro-supps-whey-isolate-3.webp"
@@ -293,7 +378,11 @@
           </div>
 
           <!-- whey protein product #4 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="74.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/musclesport-lean-whey-iso-hydro-4.webp"
@@ -356,7 +445,11 @@
           </div>
 
           <!-- whey protein product #5 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="54.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/ryno-power-premium-whey-protein-5.webp"
@@ -406,7 +499,11 @@
           </div>
 
           <!-- whey protein product #6 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="109.00"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/prolab-nutrition-whey-isolate-6.webp"
@@ -460,7 +557,11 @@
           </div>
 
           <!-- whey protein product #7 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="54.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/performance-inspired-nutrition-diet-energy-ripped-whey-protein-powder-7.webp"
@@ -514,7 +615,11 @@
           </div>
 
           <!-- whey protein product #8 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="39.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/forzagen-forza-whey-pro-protein-8.webp"
@@ -576,7 +681,11 @@
           </div>
 
           <!-- whey protein product #9 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="39.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/6am-run-track-fuel-whey-protein-9.webp"
@@ -637,7 +746,11 @@
           </div>
 
           <!-- whey protein product #10 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="84.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/mutant-pro-100-pure-whey-protein-10.webp"
@@ -693,7 +806,11 @@
           </div>
 
           <!-- whey protein product #11 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="50.00"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/dmoose-whey-protein-isolate-11.webp"
@@ -748,7 +865,11 @@
           </div>
 
           <!-- whey protein product #12 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Whey Protein"
+            data-price="69.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/pro-supps-whey-concentrate-chocolate-12.webp"
@@ -812,7 +933,11 @@
           <!--------------------- mass weight gainers --------------------->
 
           <!-- mass weight gainer #1 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Mass Weight Gainers"
+            data-price="52.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/performance-inspired-nutrition-performance-smart-gainer-13.webp"
@@ -878,7 +1003,11 @@
           </div>
 
           <!-- mass weight gainer #2 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Mass Weight Gainers"
+            data-price="49.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/forzagen-lean-gainer-premium-mass-builder-14.webp"
@@ -940,7 +1069,11 @@
           </div>
 
           <!-- mass weight gainer #3 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Mass Weight Gainers"
+            data-price="54.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/mutant-mass-whole-food-based-gainer-15.webp"
@@ -1005,7 +1138,11 @@
           </div>
 
           <!-- mass weight gainer #4 -->
-          <div class="product_block">
+          <div
+            class="product_block"
+            data-category="Mass Weight Gainers"
+            data-price="89.99"
+          >
             <div class="product_image">
               <img
                 src="/assets/products/musclesport-mass-revolution-16.webp"
@@ -1065,10 +1202,1322 @@
               </div>
             </div>
           </div>
+
+          <!-- mass weight gainer #5 -->
+          <div
+            class="product_block"
+            data-category="Mass Weight Gainers"
+            data-price="39.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/kodagenix-appetite-plus-appetite-stimulant-17.webp"
+                alt="kodagenix-appetite-plus-appetite-stimulant"
+              />
+            </div>
+
+            <h6 class="product_heading">
+              Kodagenix Appetite Plus Appetite Stimulant
+            </h6>
+            <p class="price">$39.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/kodagenix-appetite-plus-appetite-stimulant-17.webp"
+                    alt="kodagenix-appetite-plus-appetite-stimulant"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Kodagenix Appetite Plus Appetite Stimulant</h6>
+                  <p class="price">$39.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Unflavored</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Introducing Appetite Plus - the key to increasing your
+                      appetite and rediscovering the joy of meals. Our
+                      thoughtfully crafted supplement, enriched with Bai Zhu,
+                      Ginseng, Fu Ling, Jujube, Citrus Unshiu Peel, Glycyrrhiza,
+                      Ginger, and Coriander, works synergistically to naturally
+                      stimulate and enhance your desire for food. Experience a
+                      renewed enjoyment of meals and support healthy nourishment
+                      with our expert blend. Boost your appetite and savor every
+                      bite with Appetite Plus, specially formulated for your
+                      well-being.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--------------------- casein protein --------------------->
+
+          <!-- casein protein #1 -->
+          <div
+            class="product_block"
+            data-category="Casein Protein"
+            data-price="59.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/legion-casein-pure-micellar-casein-protein-powder-18.webp"
+                alt="legion-casein-pure-micellar-casein-protein-powder"
+              />
+            </div>
+
+            <h6 class="product_heading">
+              Legion Casein+ Pure Micellar Casein Protein Powder
+            </h6>
+            <p class="price">$59.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/legion-casein-pure-micellar-casein-protein-powder-18.webp"
+                    alt="legion-casein-pure-micellar-casein-protein-powder"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Legion Casein+ Pure Micellar Casein Protein Powder</h6>
+                  <p class="price">$59.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Cinnamon Cereal</p>
+                      <p>French Vanilla</p>
+                      <p>Milk Chocolate</p>
+                      <p>Strawberry</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Get the only 100% natural micellar casein powder made with
+                      Truly Grass Fed™ milk from small dairy farms in Ireland
+                      renowned for their superior and sustainable farming
+                      practices.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- casein protein #2 -->
+          <div
+            class="product_block"
+            data-category="Casein Protein"
+            data-price="64.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/BBCOM-NEW-Signature-Casein-Choc-V4-11-23-21-grey- 19.webp"
+                alt="BBCOM-NEW-Signature-Casein-Choc"
+              />
+            </div>
+
+            <h6 class="product_heading">Casein Protein</h6>
+            <p class="price">$64.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/BBCOM-NEW-Signature-Casein-Choc-V4-11-23-21-grey- 19.webp"
+                    alt="BBCOM-NEW-Signature-Casein-Choc"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Casein Protein</h6>
+                  <p class="price">$64.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p class="unavailable">Chocolate Milkshake</p>
+                      <p>Vanilla Milkshake</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Casein is naturally rich in amino acids like leucine and
+                      glutamine. Because of its slow-release natural, casein
+                      provides a steady stream of these amino acids to support
+                      muscle growth and recovery over several hours. All of this
+                      makes casein the perfect nighttime protein! Enjoy it as a
+                      shake or pudding an hour before bedtime, or during long
+                      stretches between meals.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--------------------- plant protein --------------------->
+
+          <!-- plant protein #1 -->
+          <div
+            class="product_block"
+            data-category="Plant Protein"
+            data-price="39.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/performance-inspired-nutrition-plant-based-protein-20.webp"
+                alt="performance-inspired-nutrition-plant-based-protein"
+              />
+            </div>
+
+            <h6 class="product_heading">
+              Performance Inspired Nutrition Plant-Based Protein
+            </h6>
+            <p class="price">$39.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/performance-inspired-nutrition-plant-based-protein-20.webp"
+                    alt="performance-inspired-nutrition-plant-based-protein"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Performance Inspired Nutrition Plant-Based Protein</h6>
+                  <p class="price">$39.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Chocolate Delight</p>
+                      <p>Vanilla Bean</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Plant Protein Powder with Added Probiotics for Recovery &
+                      Muscle Building Support
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- plant protein #2 -->
+          <div
+            class="product_block"
+            data-category="Plant Protein"
+            data-price="49.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/thentic-plant-protein-21.webp"
+                alt="thentic-plant-protein"
+              />
+            </div>
+
+            <h6 class="product_heading">Thentic Plant Protein</h6>
+            <p class="price">$49.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/thentic-plant-protein-21.webp"
+                    alt="thentic-plant-protein"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Thentic Plant Protein</h6>
+                  <p class="price">$49.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Chocolate</p>
+                      <p>Vanilla</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Not all plant protein is equal—Thentic's protein uses pea
+                      protein isolate, the most bioavailable and digestible
+                      form. It delivers 24g of protein, 5.8g of BCAAs, and a
+                      blend of digestive enzymes to boost gut health and
+                      recovery. Free from artificial additives, it includes
+                      organic superfoods and a complete amino acid profile. We
+                      rigorously test each batch for quality, safety, and
+                      flavor, ensuring the best in every scoop. Formulated,
+                      blended, and packaged in the USA.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- plant protein #3 -->
+          <div
+            class="product_block"
+            data-category="Plant Protein"
+            data-price="44.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/komplex-nutrition-plant-based-protein-22.webp"
+                alt="komplex-nutrition-plant-based-protein"
+              />
+            </div>
+
+            <h6 class="product_heading">
+              KompleX Nutrition Plant Based Protein
+            </h6>
+            <p class="price">$44.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/komplex-nutrition-plant-based-protein-22.webp"
+                    alt="komplex-nutrition-plant-based-protein"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>KompleX Nutrition Plant Based Protein</h6>
+                  <p class="price">$44.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Vanilla</p>
+                      <p>Peanut Butter</p>
+                      <p>Coconut</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Komplex Nutrition Is Thrilled To Announce The Launch Of
+                      Our New Plant Based Protein Powders. Available In 3
+                      Flavors, Our Plant Based Protein Powder Is Formulated With
+                      An All-Natural Blend Of 29 Different Fruits + Greens. Our
+                      Protein Is Also Gluten Free, Low Fat, And Full Of Vegan
+                      Pre & Probiotic. This Marks The Seventh New Product
+                      Innovation For Komplex Nutrition. We Are Excited To
+                      Continue Expanding Our Line Of All-Natural Performance +
+                      Wellness Products. 3 Delicious Flavors: Coconut Peanut
+                      Butter Vanilla
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!---------------------  protein bars and snacks --------------------->
+
+          <!-- protein bars and snacks #1 -->
+          <div
+            class="product_block"
+            data-category="Protein Bars & Snacks"
+            data-price="34.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/ryno-power-mana-superfood-bar-23.webp"
+                alt="ryno-power-mana-superfood-bar"
+              />
+            </div>
+
+            <h6 class="product_heading">Ryno Power Mana Superfood Bar</h6>
+            <p class="price">$34.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/ryno-power-mana-superfood-bar-23.webp"
+                    alt="ryno-power-mana-superfood-bar"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Ryno Power Mana Superfood Bar</h6>
+                  <p class="price">$34.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Strawberry Acai</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      All-Natural superfood bar with 10g of protein per serving.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- protein bars and snacks #2 -->
+          <div
+            class="product_block"
+            data-category="Protein Bars & Snacks"
+            data-price="19.07"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/sport-pux-bar-24.webp"
+                alt="sport-pux-bar"
+              />
+            </div>
+
+            <h6 class="product_heading">Sport Pux Bar</h6>
+            <p class="price">$19.07</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/sport-pux-bar-24.webp"
+                    alt="sport-pux-bar"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Sport Pux Bar</h6>
+                  <p class="price">$19.07</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Chocolate Almond</p>
+                      <p>Beet Berry</p>
+                      <p>Peanut Butter</p>
+                      <p>Cookies n' Cream</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Our Beet Berry bar harnesses the nitrate benefits of beets
+                      to optimize oxygen exchange, making it a great pre-event
+                      efficiency booster. It combines a sweet beet and berry
+                      flavor with essential protein, carbs, and fats. Like all
+                      our bars, the naturally occurring vitamins and minerals
+                      promote better bioavailability. Our Power Line, including
+                      Chocolate Almond Fudge, Cookies n' Cream, and Peanut
+                      Butter flavors, is designed to support sustained energy,
+                      rapid recovery, and muscle development. Each bar offers a
+                      delicious taste and the nutrients needed for active
+                      lifestyles.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- protein bars and snacks #3 -->
+          <div
+            class="product_block"
+            data-category="Protein Bars & Snacks"
+            data-price="39.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/legion-protein-bars-25.webp"
+                alt="legion-protein-bars"
+              />
+            </div>
+
+            <h6 class="product_heading">Legion Protein Bars</h6>
+            <p class="price">$39.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/legion-protein-bars-25.webp"
+                    alt="legion-protein-bars"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Legion Protein Bars</h6>
+                  <p class="price">$39.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Blueberry Muffin</p>
+                      <p>Chocolate Chip Cookie Dough</p>
+                      <p class="unavailable">Chocolate Peanut Butter</p>
+                      <p>Peanut Butter & Jelly</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Get our 100% natural protein bars with a premium blend of
+                      whey and milk protein plus nutritious plant-based carbs,
+                      fats, and prebiotic fiber.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!---------------------  pre workout boosters --------------------->
+
+          <!--  pre workout booster #1 -->
+          <div
+            class="product_block"
+            data-category="Pre-Workout"
+            data-price="34.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/evlution-nutrition-engn-shred-pre-workout-26.webp"
+                alt="evlution-nutrition-engn-shred-pre-workout"
+              />
+            </div>
+
+            <h6 class="product_heading">
+              EVLUTION NUTRITION ENGN Shred Pre Workout
+            </h6>
+            <p class="price">$34.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/evlution-nutrition-engn-shred-pre-workout-26.webp"
+                    alt="evlution-nutrition-engn-shred-pre-workout"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>EVLUTION NUTRITION ENGN Shred Pre Workout</h6>
+                  <p class="price">$34.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Grape</p>
+                      <p class="unavailable">Pink Starblast</p>
+                      <p>Fruit Punch</p>
+                      <p>Pink Lemonade</p>
+                      <p>Blue Raz</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>Advanced Pre-Workout + Weight Management</p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  pre workout booster #2 -->
+          <div
+            class="product_block"
+            data-category="Pre-Workout"
+            data-price="42.95"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/bucked-up-pre-workout-27.webp"
+                alt="bucked-up-pre-workout"
+              />
+            </div>
+
+            <h6 class="product_heading">Bucked Up Pre-Workout</h6>
+            <p class="price">$42.95</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/bucked-up-pre-workout-27.webp"
+                    alt="bucked-up-pre-workout"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Bucked Up Pre-Workout</h6>
+                  <p class="price">$42.95</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>White Gummy Deer (Pineapple Gummy Bear)</p>
+                      <p>Cherry Candy</p>
+                      <p>Sour Bucks (Sour Gummy Candy)</p>
+                      <p>Rocket Pop</p>
+                      <p>Blue Raz</p>
+                      <p>Grape Gainz</p>
+                      <p>Watermelon</p>
+                      <p>Blood Raz</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>Pre workout powder for clean energy, focus and pumps.</p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  pre workout booster #3 -->
+          <div
+            class="product_block"
+            data-category="Pre-Workout"
+            data-price="52.95"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/bucked-up-woke-af-pre-workout-28.webp"
+                alt="bucked-up-woke-af-pre-workout"
+              />
+            </div>
+
+            <h6 class="product_heading">Bucked Up Woke AF Pre Workout</h6>
+            <p class="price">$52.95</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/bucked-up-woke-af-pre-workout-28.webp"
+                    alt="bucked-up-woke-af-pre-workout"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Bucked Up Woke AF Pre Workout</h6>
+                  <p class="price">$52.95</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Rocket Pop 1</p>
+                      <p>Grape</p>
+                      <p>Dragon Fruit</p>
+                      <p>Blue Raz 1</p>
+                      <p>Watermelon Lemonade</p>
+                      <p>Strawberry Kiwi</p>
+                      <p>Island Fusion (Strawberry/Pineapple/Lime)</p>
+                      <p>Sour Bucks (Sour Gummy Candy)</p>
+                      <p>Grape Gainz</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Stimulant heavy pre workout powder for energy, pump and
+                      focus.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  pre workout booster #4 -->
+          <div
+            class="product_block"
+            data-category="Pre-Workout"
+            data-price="49.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/bodybuildingcom-elite-ultimate-pre-pre-workout-29.webp"
+                alt="ultimate-pre-pre-workout"
+              />
+            </div>
+
+            <h6 class="product_heading">ELITE Ultimate PRE Pre-Workout</h6>
+            <p class="price">$49.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/bodybuildingcom-elite-ultimate-pre-pre-workout-29.webp"
+                    alt="ultimate-pre-pre-workout"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>ELITE Ultimate PRE Pre-Workout</h6>
+                  <p class="price">$49.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Rainbow Sherbet</p>
+                      <p>Blue Slushie</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Elite Ultimate Pre-Workout is scientifically designed to
+                      boost performance, energy, focus, and endurance for top
+                      athletes. It features five trademarked ingredients,
+                      including 6g Citrulline, 1.5g Nitrosigine® for enhanced
+                      nitric oxide and blood flow, and 3.2g CarnoSyn®
+                      Beta-Alanine for power. With 300mg caffeine, 1g Tyrosine,
+                      and 50mg Cognizin, it maximizes energy and focus.
+                      Certified by Informed Sport and free from artificial
+                      colors or dyes, this pre-workout offers exceptional
+                      flavors for peak training.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!---------------------  post workout --------------------->
+
+          <!--  post workout  #1 -->
+          <div
+            class="product_block"
+            data-category="Post Workout"
+            data-price="19.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/bodybuildingcom-signature-bcaa-30.webp"
+                alt="ubcaa"
+              />
+            </div>
+
+            <h6 class="product_heading">BCAA</h6>
+            <p class="price">$19.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/bodybuildingcom-signature-bcaa-30.webp"
+                    alt="ubcaa"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>BCAA</h6>
+                  <p class="price">$19.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p class="unavailable">Rocket Pop</p>
+                      <p class="unavailable">Arctic Grape</p>
+                      <p class="unavailable">Watermelon Ice</p>
+                      <p>Blackberry Lime</p>
+                      <p class="unavailable">Blue Cotton Candy</p>
+                      <p>Sour Gummy</p>
+                      <p>Strawberry Lemonade</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Pushing for a new PR? Reach for BCAAs to prevent muscle
+                      breakdown after intense workouts. These essential amino
+                      acids—leucine, isoleucine, and valine—are crucial for
+                      muscle recovery, growth, and performance. Signature BCAA
+                      features a 3:1:1 ratio, maximizing leucine's anabolic
+                      potential. Take it before, during, or after your workout
+                      for fast absorption, or sip it throughout the day to keep
+                      your body in a muscle-building state. This high-quality,
+                      easily dissolvable formula supports recovery and fits any
+                      nutrition plan.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  post workout  #2 -->
+          <div
+            class="product_block"
+            data-category="Post Workout"
+            data-price="34.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/bucked-up-original-bcaa-211-31.webp"
+                alt="bucked-up-original-bcaa"
+              />
+            </div>
+
+            <h6 class="product_heading">Bucked Up Original BCAA 2:1:1</h6>
+            <p class="price">$34.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/bucked-up-original-bcaa-211-31.webp"
+                    alt="bucked-up-original-bcaa"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Bucked Up Original BCAA 2:1:1</h6>
+                  <p class="price">$34.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Blue Pineapple</p>
+                      <p>Peach Ring</p>
+                      <p class="unavailable">White Raz</p>
+                      <p>Strawberry Mojito</p>
+                      <p class="unavailable">Apple Jacked</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      BCAA Powder at a 2:1:1 Ratio for Enhanced Hydration and
+                      Recovery.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  post workout  #3 -->
+          <div
+            class="product_block"
+            data-category="Post Workout"
+            data-price="29.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/pro-supps-hydrobcaa-plus-essentials-31.webp"
+                alt="pro-supps-hydrobcaa-plus-essentials"
+              />
+            </div>
+
+            <h6 class="product_heading">Pro Supps HydroBCAA Plus Essentials</h6>
+            <p class="price">$29.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/pro-supps-hydrobcaa-plus-essentials-31.webp"
+                    alt="pro-supps-hydrobcaa-plus-essentials"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Pro Supps HydroBCAA Plus Essentials</h6>
+                  <p class="price">$29.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Watermelon</p>
+                      <p>Texas Tea</p>
+                      <p>Fruit Punch</p>
+                      <p>Blue Raspberry</p>
+                      <p class="unavailable">Blackberry Lemonade</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      If you are looking to fuel up during intense training
+                      sessions to increase output and performance, meet your new
+                      sidekick. HydroBCAA® is a vegan-friendly amino acid
+                      supplements that aids in intra-workout performance, post
+                      workout recovery and all day hydration. HydroBCAA®
+                      +Essentials features a Full Spectrum 10g EAA Matrix for
+                      optimized muscle repair and recovery.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!---------------------  creatine --------------------->
+
+          <!--  creatine  #1 -->
+          <div
+            class="product_block"
+            data-category="Creatine"
+            data-price="29.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/pro-supps-creagen-32.webp"
+                alt="pro-supps-creagen"
+              />
+            </div>
+
+            <h6 class="product_heading">Pro Supps CreaGen</h6>
+            <p class="price">$29.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/pro-supps-creagen-32.webp"
+                    alt="pro-supps-creagen"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Pro Supps CreaGen</h6>
+                  <p class="price">$29.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Blue Razz</p>
+                      <p>Rocket Pop 1</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      CreaGEN® is the only strength and recovery supplement that
+                      combines the power of Creatine with Betaine and β-Hydroxy
+                      β-methylbutyric acid (HMB) to help take your training to
+                      the next level. Creatine is the most studied supplement on
+                      the market today and is proven to increase strength and
+                      muscle mass.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  creatine  #2 -->
+          <div
+            class="product_block"
+            data-category="Creatine"
+            data-price="22.95"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/bucked-up-creatine-monohydrate-33.webp"
+                alt="bucked-up-creatine-monohydrate"
+              />
+            </div>
+
+            <h6 class="product_heading">Bucked Up Creatine Monohydrate</h6>
+            <p class="price">$22.95</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/bucked-up-creatine-monohydrate-33.webp"
+                    alt="bucked-up-creatine-monohydrate"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Bucked Up Creatine Monohydrate</h6>
+                  <p class="price">$22.95</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Unflavored</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Creatine Monohydrate is a natural substance that boosts
+                      your muscles' energy production. By supplementing with
+                      creatine, you can store more in your muscles, leading to
+                      increased energy during high-intensity workouts. This
+                      helps you lift heavier, do more reps, and achieve better
+                      results. Creatine regenerates ATP, the primary energy
+                      source for cells, allowing for more power and endurance
+                      before fatigue. It also aids in faster muscle recovery,
+                      helping you get back to the gym sooner and continue
+                      building muscle.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  creatine  #3 -->
+          <div
+            class="product_block"
+            data-category="Creatine"
+            data-price="29.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/codeage-creatine-monohydrate-powder-supplement-34.webp"
+                alt="codeage-creatine-monohydrate-powder-supplement"
+              />
+            </div>
+
+            <h6 class="product_heading">
+              Codeage Creatine Monohydrate Powder Supplement
+            </h6>
+            <p class="price">$29.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/codeage-creatine-monohydrate-powder-supplement-34.webp"
+                    alt="codeage-creatine-monohydrate-powder-supplement"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Codeage Creatine Monohydrate Powder Supplement</h6>
+                  <p class="price">$29.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Unflavored</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Codeage Liposomal Creatine delivers 5000mg of micronized
+                      creatine monohydrate per serving to support athletic
+                      performance and training. The liposomal delivery enhances
+                      bioavailability, making it a potent supplement for
+                      high-intensity workouts, resistance training, and sports.
+                      Suitable for both men and women, this non-GMO, soy-free,
+                      gluten-free, and vegan-friendly creatine powder fits
+                      various dietary needs. Manufactured in a cGMP-certified
+                      facility in the USA, it ensures quality and purity.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
+
+          <!--  creatine  #4 -->
+          <div
+            class="product_block"
+            data-category="Creatine"
+            data-price="24.99"
+          >
+            <div class="product_image">
+              <img
+                src="/assets/products/pro-supps-creatine300-35.webp"
+                alt="pro-supps-creatine"
+              />
+            </div>
+
+            <h6 class="product_heading">Pro Supps Creatine300</h6>
+            <p class="price">$24.99</p>
+            <span class="rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+
+            <div class="overlay">
+              <div class="overlay_content">
+                <div class="product_image">
+                  <img
+                    src="/assets/products/pro-supps-creatine300-35.webp"
+                    alt="pro-supps-creatine"
+                  />
+                </div>
+
+                <div class="product_description">
+                  <h6>Pro Supps Creatine300</h6>
+                  <p class="price">$24.99</p>
+                  <div class="flavor">
+                    <p>Flavor</p>
+                    <div class="flavor_blocks">
+                      <p>Unflavored</p>
+                    </div>
+                  </div>
+
+                  <div class="description">
+                    <p>Description</p>
+                    <p>
+                      Maximize your training results with Creatine supplement
+                      powder, arguably the most popular but definitely the most
+                      studied supplement on the market today. ProSupps Creatine
+                      300 features 5,000 mg of Creatine Monohydrate per scoop.
+                      Take one scoop as a beginner, or two scoops for advanced
+                      users, prior to exercise to enhance training performance.
+                      Creatine Monohydrate helps increase power, strength, and
+                      muscle mass while improving muscle endurance and recovery.
+                      * Gluten Free * Unflavored * No Artificial Colors
+                    </p>
+                  </div>
+                </div>
+
+                <div class="close_btn"><i class="fa-solid fa-xmark"></i></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer_wrapper container">
+      <div class="top_row">
+        <!-- logo -->
+        <div class="logo">
+          <a href="index.html"><img src="/assets/logo.jpg" alt="logo" /></a>
+          <a href="index.html"> PREMIUM </a>
+          <a href="index.html"> FITNESS</a>
+        </div>
+
+        <div class="column_1">
+          <p>about</p>
+          <ul>
+            <li><a href="#about_us_section">About Us</a></li>
+            <li><a href="#services_section">Services</a></li>
+            <li><a href="#trainers_section">Our Trainers</a></li>
+            <li><a href="/pages/products.html">Products</a></li>
+            <li><a href="">Terms and Conditions</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="column_2">
+          <p>Support</p>
+          <ul>
+            <li><a href="#testimonials_section">Testimonials</a></li>
+            <li><a href="/pages/faqs.html">FAQs</a></li>
+            <li><a href="#contact_us_section">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bottom_row">
+        <p>&copy; Copyright 2024, Premium Fitness. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- JS link -->
   <script src="/js/products.js"></script>

@@ -13,30 +13,161 @@ main {
         cursor: pointer;
         text-transform: uppercase;
       }
-
-      .filter_icon {
-        i {
-        }
-      }
-
-      .arrow {
-        i {
-        }
-      }
     }
 
     .products_wrapper {
+      display: flex;
+      justify-content: space-between;
+
       .filters {
-        width: 20%;
+        width: 0;
+        overflow: hidden;
+        margin-top: 100px;
+        transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
+        transform: translateX(-100%);
+        opacity: 0;
+
+        &.visible {
+          width: 15%;
+          transform: translateX(0);
+          opacity: 1;
+
+          ~ .products {
+            width: 83%;
+          }
+        }
+
+        .flavor_div {
+          p {
+            @include text_font_style($nav-elements-color, 15px, 800);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            @media (max-width: 1000px) {
+              font-size: 14px;
+            }
+          }
+
+          .flavor_options {
+            .option {
+              display: block;
+              position: relative;
+              padding-left: 35px;
+              margin-bottom: 12px;
+              cursor: pointer;
+              font-size: 22px;
+              user-select: none;
+              @include text_font_style($logo-color, 15px, 400);
+
+              @media (max-width: 1000px) {
+                font-size: 12px;
+              }
+
+              &:hover {
+                .checkmark {
+                  background-color: #ccc;
+                }
+              }
+
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 16px;
+                width: 16px;
+                border-radius: 3px;
+                background-color: #eee;
+
+                &:after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+                  left: 5px;
+                  top: 2px;
+                  width: 3px;
+                  height: 8px;
+                  border: solid $nav-elements-color;
+                  border-width: 0 3px 3px 0;
+                  transform: rotate(45deg);
+                }
+              }
+
+              input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+
+                &:checked {
+                  ~ .checkmark {
+                    background-color: #2196f3;
+
+                    &:after {
+                      display: block;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .price_div {
+          margin-top: 80px;
+
+          p {
+            @include text_font_style($nav-elements-color, 15px, 800);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            @media (max-width: 1000px) {
+              font-size: 14px;
+            }
+          }
+
+          .price_filter {
+            display: flex;
+
+            label {
+              color: white;
+
+              @media (max-width: 1000px) {
+                font-size: 14px;
+              }
+            }
+
+            input {
+              border: 1px solid white;
+              width: 70%;
+              margin-top: 10px;
+              border-radius: 3px;
+
+              &:focus {
+                outline: none;
+              }
+            }
+          }
+        }
       }
 
       .products {
-        @include flex(space-between, top);
+        @include flex(left, top);
+        column-gap: 3%;
         flex-wrap: wrap;
+
+        @media (max-width: 1000px) {
+          column-gap: 1%;
+          justify-content: space-between;
+        }
 
         .product_block {
           width: 22%;
           margin-top: 50px;
+
+          @media (max-width: 1000px) {
+            width: 25%;
+          }
 
           .product_image {
             width: 100%;
@@ -54,17 +185,29 @@ main {
             @include text_font_style($form-elements-color, 16px, 400);
             margin-top: 20px;
             cursor: pointer;
+
+            @media (max-width: 800px) {
+              font-size: 14px;
+            }
           }
 
           .price {
             @include text_font_style($footer-border-color, 16px, 800);
             margin: 10px 0;
+
+            @media (max-width: 800px) {
+              font-size: 14px;
+            }
           }
 
           .rating {
             i {
               color: $button-background;
               font-size: 14px;
+
+              @media (max-width: 800px) {
+                font-size: 12px;
+              }
             }
           }
 

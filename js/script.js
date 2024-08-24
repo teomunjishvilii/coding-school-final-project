@@ -137,13 +137,12 @@ formElement.addEventListener("submit", function (e) {
     errors.password2 = "Passwords do not match.";
   }
 
-  // email
-
+  // Clear previous error messages
   this.querySelectorAll(".error-text").forEach((descr) => {
     descr.textContent = " ";
   });
 
-  // errors
+  // Display new error messages
   for (let item in errors) {
     console.log(item); // key in errors
 
@@ -152,6 +151,22 @@ formElement.addEventListener("submit", function (e) {
     if (errorTextpTag) {
       errorTextpTag.textContent = errors[item];
     }
+  }
+
+  // If there are no errors, display success message
+  if (Object.keys(errors).length === 0) {
+    const successMessage = document.createElement("p");
+    successMessage.textContent = "You've submitted the form successfully!";
+    successMessage.style.color = "green";
+    formElement.appendChild(successMessage);
+
+    //Clear the form fields
+    formElement.reset();
+
+    // Remove the success message after a few seconds
+    setTimeout(() => {
+      successMessage.remove();
+    }, 3000); // Remove after 5 seconds
   }
 });
 
@@ -173,8 +188,26 @@ function showHidePassword() {
 
 passIcon.addEventListener("click", showHidePassword);
 
-// form submit
+// email validation - regex
+const emailInput = document.querySelector("#email");
 
-// if (Object.keys(errors).length === 0) {
-//   this.submit();
-// }
+function emailValidation() {
+  console.log("function entered");
+  const emailValue = document.querySelector("#email").value;
+  const errorTextEmail = document.querySelector("#emailError");
+  const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (emailValue.match(emailPattern)) {
+    errorTextEmail.textContent = "Your email is Valid";
+    errorTextEmail.style.color = "green";
+  } else {
+    errorTextEmail.textContent = "Your email is Invalid";
+    errorTextEmail.style.color = "#f21a09";
+  }
+
+  if (emailValue === "") {
+    errorTextEmail.innerHTML = "";
+  }
+}
+
+emailInput.addEventListener("keyup", emailValidation);

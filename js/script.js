@@ -96,18 +96,85 @@ readMoreBtnServices.addEventListener("click", () => {
   readMoreBtnServices.textContent = isReadMore ? "Read Less" : "Read More";
 });
 
-// handle program and trainer selections in the contact form
-document.addEventListener("DOMContentLoaded", function () {
-  const dropbtn = document.querySelector(".dropbtn");
-  const programDropdown = document.querySelector(".program_dropdown");
-  const dropbtnTrainer = document.querySelector(".dropbtn_trainer");
-  const trainerDropdown = document.querySelector(".trainer_dropdown");
+// form validation
+const formElement = document.querySelector("#contact_form");
 
-  dropbtn.addEventListener("click", function () {
-    programDropdown.classList.toggle("active");
+formElement.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let errors = {};
+
+  // firstname
+  let firstnameValue = document.querySelector("#firstname").value;
+
+  if (firstnameValue.trim() === "") {
+    errors.firstname = "First Name field can not be empty.";
+  }
+
+  // lastname
+  let lastnameValue = document.querySelector("#lastname").value;
+
+  if (lastnameValue.trim() === "") {
+    errors.lastname = "Last Name field can not be empty.";
+  }
+
+  // username
+  let usernameValue = document.querySelector("#username").value;
+
+  if (usernameValue.trim() === "") {
+    errors.username = "Username field can not be empty.";
+  }
+
+  // password
+  let passwordValue = document.querySelector("#password").value;
+  let password2Value = document.querySelector("#password2").value;
+
+  if (passwordValue == "") {
+    errors.password = "Password field can not be empty.";
+  }
+
+  if (passwordValue != password2Value) {
+    errors.password2 = "Passwords do not match.";
+  }
+
+  // email
+
+  this.querySelectorAll(".error-text").forEach((descr) => {
+    descr.textContent = " ";
   });
 
-  dropbtnTrainer.addEventListener("click", function () {
-    trainerDropdown.classList.toggle("active");
-  });
+  // errors
+  for (let item in errors) {
+    console.log(item); // key in errors
+
+    let errorTextpTag = document.getElementById("error-" + item);
+
+    if (errorTextpTag) {
+      errorTextpTag.textContent = errors[item];
+    }
+  }
 });
+
+// show hide password
+const passwordShow = document.querySelector("#password");
+const passIcon = document.getElementById("showIcon");
+
+function showHidePassword() {
+  if (passwordShow.type === "password") {
+    passwordShow.setAttribute("type", "text");
+    passIcon.classList.remove("fa-eye");
+    passIcon.classList.add("fa-eye-slash");
+  } else {
+    passwordShow.setAttribute("type", "password");
+    passIcon.classList.add("fa-eye");
+    passIcon.classList.remove("fa-eye-slash");
+  }
+}
+
+passIcon.addEventListener("click", showHidePassword);
+
+// form submit
+
+// if (Object.keys(errors).length === 0) {
+//   this.submit();
+// }

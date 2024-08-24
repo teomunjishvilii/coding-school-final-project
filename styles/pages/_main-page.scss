@@ -857,6 +857,17 @@ main {
             display: flex;
             flex-direction: column;
 
+            i {
+              color: $logo-color;
+              display: inline;
+              cursor: pointer;
+            }
+
+            p {
+              @include text_font_style($button-background, 12px, 300);
+              margin-top: 10px;
+            }
+
             @media (max-width: 715px) {
               align-items: center;
             }

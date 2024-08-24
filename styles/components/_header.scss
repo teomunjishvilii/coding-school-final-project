@@ -68,16 +68,6 @@ header {
             font-family: $font-primary;
             position: relative;
 
-            &:first-child {
-              &:hover {
-                .submenu {
-                  max-height: 400px;
-                  opacity: 1;
-                  visibility: visible;
-                }
-              }
-            }
-
             &::after {
               display: inline-block;
               content: "";
@@ -106,6 +96,36 @@ header {
               visibility: hidden;
               transition: max-height 0.5s ease, opacity 0.5s ease,
                 visibility 0.5s ease;
+
+              @media (max-width: 715px) {
+                font-size: 13px;
+                top: 0;
+                left: 100%;
+                transform: translateX(-100%);
+                transition: transform 0.5s ease, max-height 0.5s ease,
+                  opacity 0.5s ease, visibility 0.5s ease;
+              }
+            }
+
+            &:first-child {
+              &:hover {
+                .submenu {
+                  max-height: 400px;
+                  opacity: 1;
+                  visibility: visible;
+
+                  @media (max-width: 715px) {
+                    transform: translateX(50%);
+                    height: auto;
+                    width: auto;
+                    margin-top: -35px;
+
+                    li {
+                      padding: 10px;
+                    }
+                  }
+                }
+              }
             }
 
             a {

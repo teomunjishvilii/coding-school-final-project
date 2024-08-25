@@ -212,7 +212,7 @@ function emailValidation() {
 
 emailInput.addEventListener("keyup", emailValidation);
 
-// splidejs slider
+// splidejs slider horizontal - trainers section
 
 let splide = new Splide(".splide", {
   type: "loop",
@@ -221,6 +221,54 @@ let splide = new Splide(".splide", {
   gap: "5%",
   arrows: true,
   pagination: false,
+
+  breakpoints: {
+    700: {
+      perPage: 2,
+    },
+  },
 });
 
 splide.mount();
+
+// fetch reviews data
+
+const mainWraper = document.querySelector(".testimonials");
+
+fetch("https://jsonplaceholder.typicode.com/comments?_limit=3")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    data.forEach((element) => {
+      addTestimonial(element);
+    });
+  })
+  .catch((error) => console.error("Error fetching data:", error));
+
+function addTestimonial(item) {
+  const divWraper = document.createElement("div");
+  divWraper.classList.add("each_testimonial");
+
+  const quote = document.createElement("i");
+  quote.classList.add("fa-solid");
+  quote.classList.add("fa-quote-left");
+  quote.classList.add("quote");
+
+  const name = document.createElement("h6");
+  name.classList.add("testimonial_name");
+  name.innerText = item.name;
+
+  const reviewText = document.createElement("p");
+  reviewText.classList.add("testimonial_text");
+  reviewText.innerText = item.body;
+
+  divWraper.appendChild(quote);
+  divWraper.appendChild(name);
+  divWraper.appendChild(reviewText);
+  mainWraper.appendChild(divWraper);
+}

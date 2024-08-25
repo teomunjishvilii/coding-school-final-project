@@ -20,6 +20,7 @@ html {
 
     h5 {
       margin-bottom: 20px;
+      margin-top: 100px;
       @include text_font_style($button-background, 14px, 400);
       text-transform: uppercase;
 

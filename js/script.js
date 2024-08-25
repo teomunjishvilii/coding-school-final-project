@@ -211,3 +211,16 @@ function emailValidation() {
 }
 
 emailInput.addEventListener("keyup", emailValidation);
+
+// splidejs slider
+
+let splide = new Splide(".splide", {
+  type: "loop",
+  perPage: 3,
+  focus: "center",
+  gap: "5%",
+  arrows: true,
+  pagination: false,
+});
+
+splide.mount();

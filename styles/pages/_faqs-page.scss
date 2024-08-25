@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 main {
   .faqs_page {
     margin-top: 80px;
@@ -23,7 +30,12 @@ main {
           .faqs_item {
             &.active {
               .question {
+                background: -o-linear-gradient(305deg, #444, #222);
                 background: linear-gradient(145deg, #444, #222);
+                -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
+                  0 5px 15px rgba(0, 0, 0, 0.1),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.2),
+                  inset 0 -1px 2px rgba(0, 0, 0, 0.3);
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
                   0 5px 15px rgba(0, 0, 0, 0.1),
                   inset 0 1px 0 rgba(255, 255, 255, 0.2),
@@ -36,7 +48,11 @@ main {
             }
 
             .question {
+              display: -webkit-box;
+              display: -ms-flexbox;
               display: flex;
+              -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
               justify-content: space-between;
               border-bottom: 1px solid $logo-color;
               padding: 20px;
@@ -52,6 +68,8 @@ main {
             .answer {
               height: 0;
               overflow: hidden;
+              -webkit-transition: height 0.5s ease-out;
+              -o-transition: height 0.5s ease-out;
               transition: height 0.5s ease-out;
               @include text_font_style($logo-color, 18px, 300);
 

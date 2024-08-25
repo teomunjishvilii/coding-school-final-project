@@ -1,12 +1,17 @@
 @mixin flex($justify, $align) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: $justify;
+  -ms-flex-pack: $justify;
   justify-content: $justify;
+  -webkit-box-align: $align;
+  -ms-flex-align: $align;
   align-items: $align;
 }
 
 @mixin text_font_style($fc, $fs, $fw) {
   color: $fc;
-  // font-family: $ff;
   font-size: $fs;
   font-weight: $fw;
   line-height: normal;

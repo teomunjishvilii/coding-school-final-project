@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
   scroll-behavior: smooth;
 
@@ -59,6 +66,8 @@ html {
 
         &::after {
           left: 50%;
+          -webkit-transform: translate(-50%);
+          -ms-transform: translate(-50%);
           transform: translate(-50%);
         }
       }

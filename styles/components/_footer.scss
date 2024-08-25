@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 footer {
   // general styles
   p {
@@ -28,6 +35,8 @@ footer {
           width: 0%;
           height: 2px;
           background-color: $button-background;
+          -webkit-transition: $change-width;
+          -o-transition: $change-width;
           transition: $change-width;
           position: absolute;
           bottom: -5px;
@@ -51,6 +60,8 @@ footer {
       border-top: 1px solid $footer-border-color;
       border-bottom: 1px solid $footer-border-color;
       padding: 100px 0;
+      -webkit-column-gap: 15%;
+      -moz-column-gap: 15%;
       column-gap: 15%;
 
       .logo {
@@ -79,6 +90,7 @@ footer {
           }
           img {
             width: 100%;
+            -o-object-fit: contain;
             object-fit: contain;
           }
         }
@@ -86,7 +98,12 @@ footer {
 
       .column_1,
       .column_2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
       }
     }

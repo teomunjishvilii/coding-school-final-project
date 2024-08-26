@@ -5,6 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Discover our gym's services, trainers, and facilities. Join us for a healthier lifestyle with personalized training and state-of-the-art equipment."
+    />
+    <meta
+      name="keywords"
+      content="gym, fitness, health, training, personal trainers, workout, exercise, fitness center"
+    />
+    <meta name="author" content="Teo Munjishvili" />
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Premium Fitness" />
+    <meta
+      property="og:description"
+      content="Explore our gym's services, trainers, and facilities. Achieve your fitness goals with our expert trainers and top-notch equipment."
+    />
+    <meta property="og:image" content="./assets/section1-bg-image.jpg" />
+    <meta
+      property="og:url"
+      content="https://teomunjishvilii.github.io/coding-school-final-project/"
+    />
+    <meta property="og:type" content="website" />
+
     <!-- website title -->
     <title>Premium Fitness</title>
 
@@ -22,8 +46,14 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- css link -->
+    <!-- css links -->
     <link rel="stylesheet" href="styles/css/global.css" />
+
+    <!-- splide css -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@splidejs/splide/dist/css/splide.min.css"
+    />
 
     <!-- animate style link -->
     <link
@@ -47,6 +77,7 @@
         <div class="navigation">
           <nav>
             <ul>
+              <li>
                 <a href="#about_us_section">about us</a>
                 <ul class="submenu">
                   <li><a href="#services_section">services</a></li>
@@ -288,9 +319,76 @@
         <div class="our_trainers_section container" id="trainers_section">
           <h5>our trainers</h5>
           <h3>Meet Our Best Trainers</h3>
-          <p>TODO: slider goes here</p>
 
-          <!-- TODO: slider goes here-->
+          <!-- trainers -->
+
+          <div class="splide">
+            <div class="splide__track">
+              <div class="splide__list">
+                <div class="splide__slide">
+                  <div class="img_block">
+                    <img src="/assets/trainer-1.jpg" alt="trainer-img" />
+                  </div>
+
+                  <h6>Adam</h6>
+
+                  <p>Expert in functional fitness and strength training.</p>
+
+                  <div class="details">
+                    <p><span>Working Hours:</span> Mon-Fri, 9 AM - 5 PM</p>
+                    <p><span>Price Range:</span> $60 - $80 per hour</p>
+                  </div>
+                </div>
+
+                <div class="splide__slide">
+                  <div class="img_block">
+                    <img src="/assets/trainer-2.jpg" alt="trainer-img" />
+                  </div>
+
+                  <h6>Sophie</h6>
+
+                  <p>
+                    Certified in holistic wellness and mobility improvement.
+                  </p>
+
+                  <div class="details">
+                    <p><span>Working Hours:</span> Mon-Fri, 10 AM - 6 PM</p>
+                    <p><span>Price Range:</span> $55 - $75 per hour</p>
+                  </div>
+                </div>
+
+                <div class="splide__slide">
+                  <div class="img_block">
+                    <img src="/assets/trainer-3.jpg" alt="trainer-img" />
+                  </div>
+
+                  <h6>Liam</h6>
+
+                  <p>Focused on muscle gain and bodybuilding techniques.</p>
+
+                  <div class="details">
+                    <p><span>Working Hours:</span> Mon-Fri, 8 AM - 4 PM</p>
+                    <p><span>Price Range:</span> $65 - $85 per hour</p>
+                  </div>
+                </div>
+
+                <div class="splide__slide">
+                  <div class="img_block">
+                    <img src="/assets/trainer-4.jpg" alt="trainer-img" />
+                  </div>
+
+                  <h6>Ava</h6>
+
+                  <p>Specializes in weight loss and endurance coaching.</p>
+
+                  <div class="details">
+                    <p><span>Working Hours:</span> Mon-Fri, 11 AM - 7 PM</p>
+                    <p><span>Price Range:</span> $50 - $70 per hour</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -419,6 +517,8 @@
         <div class="testimonials_section container" id="testimonials_section">
           <h5>testimonials</h5>
           <h3>What People Says</h3>
+
+          <div class="testimonials"></div>
         </div>
       </section>
 
@@ -485,15 +585,15 @@
             <div class="right_block">
               <h3>Join Now</h3>
               <div class="contact_form_wrapper">
-                <form action="">
+                <form action="" id="contact_form" method="post">
                   <!-- firstname -->
                   <input
                     type="text"
                     id="firstname"
                     name="firstname"
                     placeholder="First Name"
-                    required
                   />
+                  <p class="error-text" id="error-firstname"></p>
 
                   <!-- lastname -->
                   <input
@@ -502,6 +602,16 @@
                     name="lastname"
                     placeholder="Last Name"
                   />
+                  <p class="error-text" id="error-lastname"></p>
+
+                  <!-- username -->
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Username"
+                  />
+                  <p class="error-text" id="error-username"></p>
 
                   <!-- email -->
                   <input
@@ -510,105 +620,33 @@
                     name="email"
                     placeholder="Email"
                   />
+                  <p id="emailError"></p>
 
-                  <!-- trainer -->
-                  <div class="trainer_dropdown">
-                    <button class="dropbtn_trainer">
-                      Choose a Trainer
-                      <span><i class="fa-solid fa-angle-down"></i></span>
-                    </button>
+                  <!-- password -->
+                  <div class="password_div">
+                    <input
+                      type="password"
+                      id="password"
+                      name="password"
+                      placeholder="Password"
+                    />
 
-                    <div class="dropdown-content">
-                      <!-- option 1 -->
-                      <div>
-                        <input
-                          type="radio"
-                          name="trainer"
-                          value="trainer1"
-                          id="trainer1"
-                        />
-                        <label for="trainer1"> Trainer 1</label>
-                      </div>
-
-                      <!-- option 2 -->
-                      <div>
-                        <input
-                          type="radio"
-                          name="trainer"
-                          value="trainer2"
-                          id="trainer2"
-                        />
-                        <label for="trainer2"> Trainer 2</label>
-                      </div>
-
-                      <!-- option 3 -->
-                      <div>
-                        <input
-                          type="radio"
-                          name="trainer"
-                          value="trainer3"
-                          id="trainer3"
-                        />
-                        <label for="trainer3"> Trainer 3</label>
-                      </div>
-
-                      <!-- option 4 -->
-                      <div>
-                        <input
-                          type="radio"
-                          name="trainer"
-                          value="trainer4"
-                          id="trainer4"
-                        />
-                        <label for="trainer4"> Trainer 4</label>
-                      </div>
-                    </div>
+                    <!-- password eye -->
+                    <i class="fa-solid fa-eye" id="showIcon"></i>
                   </div>
 
-                  <!-- program -->
-                  <div class="program_dropdown">
-                    <button class="dropbtn">
-                      Choose a Program
-                      <span><i class="fa-solid fa-angle-down"></i></span>
-                    </button>
+                  <p class="error-text" id="error-password"></p>
 
-                    <div class="dropdown-content">
-                      <!-- option 1 -->
-                      <div>
-                        <input
-                          type="checkbox"
-                          name="weight-loss"
-                          value="weight-loss"
-                          id="weight-loss"
-                        />
-                        <label for="weight-loss"> Weight Loss</label>
-                      </div>
+                  <!-- repeat password -->
 
-                      <!-- option 2 -->
-                      <div>
-                        <input
-                          type="checkbox"
-                          name="muscle-gain"
-                          value="muscle-gain"
-                          id="muscle-gain"
-                        />
-                        <label for="muscle-gain"> Muscle Gain</label>
-                      </div>
+                  <input
+                    type="password"
+                    id="password2"
+                    name="password2"
+                    placeholder="Repeat Password"
+                  />
 
-                      <!-- option 3 -->
-                      <div>
-                        <input
-                          type="checkbox"
-                          name="endurance-training"
-                          value="endurance-training"
-                          id="endurance-training"
-                        />
-                        <label for="endurance-training">
-                          Endurance Training</label
-                        >
-                      </div>
-                    </div>
-                  </div>
+                  <p class="error-text" id="error-password2"></p>
 
                   <input type="submit" value="Submit" />
                 </form>
@@ -658,7 +696,8 @@
       </div>
     </footer>
 
-    <!-- JavaScript link -->
+    <!-- JavaScript links -->
+    <script src="/node_modules/@splidejs/splide/dist/js/splide.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
